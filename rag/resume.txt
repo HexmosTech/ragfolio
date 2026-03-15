@@ -1,0 +1,152 @@
+Maneshwar C
+
+
+athreyac4@gmail.com
+9620107401
+Bengaluru, India
+https://www.linkedin.com/in/maneshwar-athreya
+https://github.com/lovestaco
+
+
+
+------------------------
+SDE - I
+
+
+------------------------
+<b>Smart-working and fun to talk with guy holding a BE in Computer Science.        Seeking to use my superior knowledge of dev skills to effectively make a small change in the world.</b>
+
+
+Work Experience
+------------------------
+SDE - I
+Antino
+02/2023 - Present
+Bengaluru- India
+
+Over the past two years at Antino, I have worked on three projects, each increasing in scope and complexity. My first project focused on creating robust Jest test cases for API functionality. I then moved on to LionCharge, a nationwide platform for managing EV charging stations. I am about to complete Blive, an EV rental platform that provides real-time EV metrics through the app, enhancing user experience and operational efficiency.  
+
+Achievements/Tasks  
+- LionCharge: Led the backend development through three phases, successfully managing three interns and enhancing productivity. Integrated database setups for vendor daily settlements and implemented payment integration and WhatsApp notifications to optimize customer interaction.  
+- Developed expertise in EV Chargers communication using the OCPP protocol, creating robust backend structures to ensure reliable operations across electric vehicle charging stations.  
+- Blive: Quickly learned Nest.js in just three days, mentoring an intern through the learning process. Played a crucial role in implementing RBAC, payment integration, IoT device real-time metrics, and eKYC verification.  
+- Prevented potential errors in database schema design, saving the team significant time and resources, and ensuring efficient, scalable database management throughout the project lifecycle.  
+
+
+Software Dev Engineer Intern
+Hexmos
+09/2021 - 02/2023
+Bengaluru- India
+I have gained experience in Frontend, Backend, DevOps, leadership, building teams, and researching.      Worked on developing an attrition control feedback system (web and app).    Worked on developing a productivity-increasing standalone application.
+Achievements/Tasks
+- Learned to create designs using Figma and develop in React Native, React. 
+- Set up DB schema for product called Feedback in PostgreSQL &amp; Parse. Wrote REST APIs- Python-Django, GO, Node.js 
+- Trained 4 students to Web Developers in a span of one year without providing/taking any salary/fees. 
+
+
+
+
+
+
+Honor Awards
+------------------------
+Key Contributor of the year
+Antino
+2024
+
+
+Going Extra Mile (GEM)
+Antino
+04/2024
+
+
+Rising Star
+Antino
+08/2023
+
+
+
+
+
+Skills
+------------------------
+-Java Script
+-Python
+-Go Lang
+-C++
+-SQL
+-Django
+-Go echo
+-Node.js
+-Next.js
+-Nest.js
+-React.js
+-React Native
+-Expo Go
+-TypeORM
+-Sequilize
+-Express
+-Redux
+-Parse ORM
+-Redis
+-Postgres
+-MariaDB
+-Amazon Web Services
+-S3
+-SQS
+-EC2
+-SNS
+-Route53
+-Lambda
+-Event Bridge
+-GitHub
+-GitLab
+-Linux
+-Docker
+-Jenkins
+-CircleCI
+-Nginx
+-Kubernetes
+-HashiStack- Nomad, Consul, Vault
+-Team building
+-Team Management
+-Leadership
+-Debugging
+-Problem Solving
+
+
+
+Personal Projects
+------------------------
+ZENGRID
+2022 - 2023
+- React Native, ExpoGo, PostgreSQL, MongoDB, Redux ORM. 
+- A research-based Standalone Mobile Application where you can reflect on yourself hourly, realize and reduce the unproductiveness in a day. 
+- Offline-online, multi-device, inbuilt ORM, Minimal UI. 
+
+
+SESGEN
+2021 - 2022
+- AWS, BOTO3, Python, SES, Route53, Iam. A Python CLI tool that creates an IAM user gives it permissions,  Creates SES Identity, and Verifies it. Created this tool to automate the time-consuming manual process of adding new domain identities for a given hosted zone. 
+
+
+
+
+
+Education
+------------------------
+Bachelor of Engineering (CS)
+Moodlakatte Institute of Technology
+2019 - 2023
+Udupi, Karnataka, India
+Courses
+
+
+
+
+
+Achievements
+------------------------
+National Cadet Corps- Silver medal in firing
+2016 - 2019
+<b>Led a troop as a Corporal.                                                                Attended four camps (CATC x 2, NIC, RDC) and secured silver in firing 0.22 rifle 200 meters at Doddaballapura Combined Annual Training Camp (CATC).</b>

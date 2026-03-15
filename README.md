@@ -21,5 +21,6 @@ One project: frontend (React + Vite + Tailwind), backend (FastAPI), and RAG (uv 
    cd frontend && npm install && npm run dev
    ```
    App at http://localhost:5000. Requests to `/api/health` and `/api/ask` are proxied to the backend.
+   
 
 Optionally install RAG for development: `cd rag && uv sync`.
