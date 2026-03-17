@@ -5,7 +5,10 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
-from .rag_query import answer_question
+try:
+    from .rag_query import answer_question
+except (ImportError, ValueError):
+    from rag_query import answer_question
 
 app = FastAPI(
     title="Ragfolio RAG API",
