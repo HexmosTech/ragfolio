@@ -140,8 +140,40 @@ function Add-ToPath {
         $env:PATH = ($env:PATH.TrimEnd(';') + ';' + $dir)
     }
 }
+function Install-Curl {
+    Write-Step 1 "Installing curl"
+
+    # Detect — skip if already present
+    try {
+        $curlVersion = & curl.exe --version 2>&1
+        if ($LASTEXITCODE -eq 0 -and $curlVersion -match 'curl ') {
+            Write-Skip "curl" "already installed"
+            return
+        }
+    } catch {
+        # curl not found — proceed with install
+    }
+
+    # Install curl using winget (first-party package source on modern Windows)
+    try {
+        $ErrorActionPreference = 'Stop'
+        if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
+            Write-Fatal "curl is missing and winget is unavailable. Install curl manually, then rerun."
+        }
+
+        Write-Host "Installing curl via winget..."
+        & winget install --id cURL.cURL --exact --accept-package-agreements --accept-source-agreements
+        if ($LASTEXITCODE -ne 0) {
+            throw "winget install cURL.cURL exited with code $LASTEXITCODE"
+        }
+
+        Write-Ok "curl installed"
+    } catch {
+        Write-Fatal "curl installation failed: $_"
+    }
+}
 function Install-Python {
-    Write-Step 1 "Installing Python 3.12.10 + uv"
+    Write-Step 2 "Installing Python 3.12.10 + uv"
 
     # Detect — skip if already present
     try {
@@ -163,7 +195,10 @@ function Install-Python {
     try {
         $ErrorActionPreference = 'Stop'
         Write-Host "Downloading Python 3.12.10..."
-        Invoke-WebRequest -Uri $url -OutFile $installer -UseBasicParsing
+        & curl.exe -L --fail --output $installer $url
+        if ($LASTEXITCODE -ne 0) {
+            throw "curl download failed with code $LASTEXITCODE"
+        }
 
         Write-Host "Running Python installer silently..."
         $proc = Start-Process -FilePath $installer `
@@ -197,7 +232,7 @@ function Install-Python {
     }
 }
 function Install-Git {
-    Write-Step 2 "Installing Git"
+    Write-Step 3 "Installing Git"
 
     # Detect — skip if already present
     try {
@@ -218,7 +253,10 @@ function Install-Git {
     try {
         $ErrorActionPreference = 'Stop'
         Write-Host "Downloading Git for Windows..."
-        Invoke-WebRequest -Uri $url -OutFile $installer -UseBasicParsing
+        & curl.exe -L --fail --output $installer $url
+        if ($LASTEXITCODE -ne 0) {
+            throw "curl download failed with code $LASTEXITCODE"
+        }
 
         Write-Host "Running Git installer silently..."
         $proc = Start-Process -FilePath $installer `
@@ -240,7 +278,7 @@ function Install-Git {
     Add-ToPath "C:\Program Files\Git\cmd"
 }
 function Install-NvmAndNode {
-    Write-Step 3 "Installing nvm-windows and Node.js 22.22.0"
+    Write-Step 4 "Installing nvm-windows and Node.js 22.22.0"
 
     # Detect nvm — skip if already present
     $nvmPresent = $false
@@ -261,7 +299,10 @@ function Install-NvmAndNode {
         try {
             $ErrorActionPreference = 'Stop'
             Write-Host "Downloading nvm-setup.exe..."
-            Invoke-WebRequest -Uri $url -OutFile $installer -UseBasicParsing
+            & curl.exe -L --fail --output $installer $url
+            if ($LASTEXITCODE -ne 0) {
+                throw "curl download failed with code $LASTEXITCODE"
+            }
 
             Write-Host "Running nvm installer silently..."
             $proc = Start-Process -FilePath $installer `
@@ -421,6 +462,7 @@ Host github.com
 # Main installation pipeline
 # ---------------------------------------------------------------------------
 
+Install-Curl
 Install-Python
 Install-Git
 Install-NvmAndNode
